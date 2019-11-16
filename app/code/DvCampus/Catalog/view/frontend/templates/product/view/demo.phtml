@@ -1,3 +1,4 @@
 <?php /** @var \Magento\Framework\View\Element\Template $block */ ?>
 <p><?= $block->escapeHtml(__('Parent Block')) ?></p>
-<?= $block->getChildHtml('product.info.demo.testAlias') ?>
+<?php // will output all children, because blocks in the module and in the theme have different aliases ?>
+<?= $block->getChildHtml() ?>
